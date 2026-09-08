@@ -1,31 +1,33 @@
 class Prefablens < Formula
   desc "Semantic diff for UnityYAML assets"
   homepage "https://github.com/hashiiiii/PrefabLens"
-  version "0.9.2"
+  version "0.10.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/hashiiiii/PrefabLens/releases/download/v#{version}/prefablens-macos-arm64.zip"
-      sha256 "35e0dbe4ce05d9d9e0fe8719d9e8a71fdb6972b4c54937c847584f3e32333f55"
+      sha256 "48bfd9975727e90e36f72f6ae6d4cc433e41330ca3e6f71da4e8987ec3d66e05"
     end
     on_intel do
       url "https://github.com/hashiiiii/PrefabLens/releases/download/v#{version}/prefablens-macos-x64.zip"
-      sha256 "ef3ab1de5f9225980e560da3e7b3e18ac075a5b0cd316c155df211096f539c1e"
+      sha256 "26a17cc693f835cb47353f9b1f08a911407fd37620ced3e28737edbe2129615c"
     end
   end
   on_linux do
     on_intel do
       url "https://github.com/hashiiiii/PrefabLens/releases/download/v#{version}/prefablens-linux-x64.zip"
-      sha256 "d1434497f966087d89dc4c7a2c096a55330cac97ff9f3dbb6943042f46ce69ca"
+      sha256 "cef18ab3a30e7bccd3ae0d74e0988aac71d6ff5e3ea059db673f8fe409b2d088"
     end
   end
 
   def install
-    bin.install "prefablens"
+    bin.install "prefablens", "git-merge-prefablens"
   end
 
   test do
-    assert_match "usage: prefablens", shell_output("#{bin}/prefablens --help")
+    ENV.prepend_path "PATH", bin
+    assert_equal "prefablens #{version}\n", shell_output("#{bin}/prefablens --version")
+    assert_equal "prefablens merge-strategy #{version}\n", shell_output("#{bin}/git-merge-prefablens --version")
   end
 end
