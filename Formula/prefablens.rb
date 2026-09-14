@@ -1,23 +1,23 @@
 class Prefablens < Formula
   desc "Semantic diff for UnityYAML assets"
   homepage "https://github.com/hashiiiii/PrefabLens"
-  version "0.10.5"
+  version "0.10.6"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/hashiiiii/PrefabLens/releases/download/v#{version}/prefablens-macos-arm64.zip"
-      sha256 "d07655068988b969c5b0b1cb0064874a5f58ac5622cca4329d36dc97b9b586b8"
+      sha256 "c7dfe6af519775ee0b22ed47c260f407c14d229e86eaef5ac8709a658f1a88aa"
     end
     on_intel do
       url "https://github.com/hashiiiii/PrefabLens/releases/download/v#{version}/prefablens-macos-x64.zip"
-      sha256 "de3ce8f3ef0432e32a16c33301b673a8aaf01bc77032e57421c1e505c63ced96"
+      sha256 "4d9d5e33197b1f04caa490c2356709a25de2bbe568f70f1543e2463c064e6d9e"
     end
   end
   on_linux do
     on_intel do
       url "https://github.com/hashiiiii/PrefabLens/releases/download/v#{version}/prefablens-linux-x64.zip"
-      sha256 "34336ec32802bb031d922b91c8eb0beb448c4d05750848ae4b115f2791564c6a"
+      sha256 "e897e900c49341b8e855582e5d4a11f271623e2247825800ee1cc0fdf191a309"
     end
   end
 
