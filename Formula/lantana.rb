@@ -2,27 +2,27 @@
 class Lantana < Formula
   desc "Terminal viewer for Git patches"
   homepage "https://github.com/hashiiiii/Lantana"
-  version "0.3.0"
+  version "0.3.1"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/hashiiiii/Lantana/releases/download/v#{version}/lantana-macos-arm64.zip"
-      sha256 "55ee33aa70f6031b7b53ad7b5b9972818041629ef0b07e342c38c116b234343d"
+      sha256 "7e1006c1f739a0bdb86e3c6ece7e311b1dfe4d7541034fa7ecf71e09f8461046"
     end
     on_intel do
       url "https://github.com/hashiiiii/Lantana/releases/download/v#{version}/lantana-macos-x64.zip"
-      sha256 "f4a961a17b291d91982894efcca4bbd36b8da08727f44e56cddc04d7f29abf5b"
+      sha256 "07c8554adf4e58ebd2b0d3baa37fe6f5f3321bcd93a5e5f989e68c49b1ac4129"
     end
   end
   on_linux do
     on_intel do
       url "https://github.com/hashiiiii/Lantana/releases/download/v#{version}/lantana-linux-x64.zip"
-      sha256 "4a55773c3baa5cd41681c391259fa99296d33cd121b9cd48d8ab37d539e7c524"
+      sha256 "e569d0e299ead32e92c9d3cbfe9583713d3554b804c6590a570521d32d3244c3"
     end
     on_arm do
       url "https://github.com/hashiiiii/Lantana/releases/download/v#{version}/lantana-linux-arm64.zip"
-      sha256 "57b0bd204006ba2ff4908cb785fb7b88f2cfea3328af3f783f58dbc958b7bff3"
+      sha256 "e9c09c9cd47f472646a9bb728dfca3de40fe77a41fb4641456a61ccad2dd0435"
     end
   end
 
